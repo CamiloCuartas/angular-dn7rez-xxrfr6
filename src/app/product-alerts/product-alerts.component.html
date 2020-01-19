@@ -1,5 +1,5 @@
 <!--*ngIf="product.price > 700": valida si el precio del producto-->
 <!--es mayor de 700, si no lo es, no reenderiza el html-->
 <p *ngIf="product.price > 700" [title]="'Notificarme'">
-  <button>Notify Me</button>
+  <button (click)="notify.emit()">Notify Me</button>
 </p>
