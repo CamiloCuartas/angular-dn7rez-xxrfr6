@@ -1,7 +1,7 @@
 <h2>Products</h2>
 <!--*ngFor: es el ciclo for para angular-->
 <!--let product of products: es la asignacion del objeto json products a la variable product-->
-<div *ngFor="let product of products">
+<div *ngFor="let product of product">
 	<h3>
 		<!--title es la propiedad que se asigna a la etiqueta a-->
 		<!--product.name-->
@@ -27,6 +27,10 @@
 	<button (click)="share()" [title]="'Compartir'">
       Share
   </button>
+
+  <app-product-alerts
+    [product]="product">
+  </app-product-alerts>
 </div>
 
 
