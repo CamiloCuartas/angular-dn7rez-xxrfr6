@@ -16,10 +16,11 @@ export class ProductListComponent {
   //el array de la variable products importada desde el archivo ../products.ts
   product = products;
 
+  //escuchador del evento click para el boton Share el cual se encuentra reenderizado en la vista principal
   share() {
     window.alert('The product has been shared!');
   }
-
+  //escuchador del evento clic para el boton Notify Me el cual se reenderiza en la vista hija product-alerts.component.html. Los eventos de los hijos de escuchan en el padre segun la documentacion
   onNotify() {
     window.alert('You will be notified when the product goes on sale');
   }
