@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 //Import Input from @angular/core.
 import { Input } from '@angular/core';
+import { Output, EventEmitter } from '@angular/core';
 
 //@Component() decorator. This indicates that the following class is a component
 @Component({
@@ -16,6 +17,7 @@ export class ProductAlertsComponent implements OnInit {
 
   //The @Input() decorator indicates that the property value passes in from the component's parent, the product list component.
   @Input() product;
+  @Output() notify = new EventEmitter();
 
   constructor() { }
 
