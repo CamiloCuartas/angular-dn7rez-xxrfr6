@@ -29,7 +29,9 @@
       Share
   </button>
 
-  <!--onNotify(): nombre del escuchador de eventos enviado desde el controlador-->
+  <!--(notify): variable recibida desde el component hijo el cual es un evento y es enviado al component padre a traves del metodo onNotify()-->
+  <!--onNotify(): nombre del escuchador de eventos el cual esta declarado en el component padre -> onNotify() {}-->
+
   <app-product-alerts
     [product]="product"    
     (notify)="onNotify()">

@@ -17,6 +17,11 @@ export class ProductAlertsComponent implements OnInit {
 
   //The @Input() decorator indicates that the property value passes in from the component's parent, the product list component.
   @Input() product;
+
+  //notify: nombre de variable que le enviamos a la vista padre product-list.components.html. -> (notify)="onNotify()"
+
+  //La recibimos de la vista product-alerts.component.html a traves del evento clic en el boton -> <button (click)="notify.emit()">Notify Me</button>
+  
   @Output() notify = new EventEmitter();
 
   constructor() { }
